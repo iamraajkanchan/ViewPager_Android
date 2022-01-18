@@ -10,6 +10,14 @@ class MainActivity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        viewpager.adapter = CustomPagerAdapter(this)
+
+        val images = listOf(
+            R.drawable.ic_4g ,
+            R.drawable.ic_airport_shuttle ,
+            R.drawable.ic_launcher_background ,
+            R.drawable.ic_launcher_foreground
+        )
+        val adapter = ViewPagerAdapter(images)
+        viewpager2.adapter = adapter
     }
 }
